@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Rating from "../components/Rating";
 import data from "../data";
 
 export default function ProductScreen(props) {
+  const [qty, setQty] = useState(1);
+  const productId = props.match.params.id;
+  const addToCartHandler = () => {
+    props.history.push(`/cart/${productId}?qty=${qty}`);
+  };
   const product = data.products.find((x) => x._id === props.match.params.id);
   if (!product) {
     return <div>Product Not Found</div>;
@@ -53,9 +58,35 @@ export default function ProductScreen(props) {
                   </div>
                 </div>
               </li>
-              <li>
-                <button className="primary block">Add to cart </button>
-              </li>
+              {product.countInStock > 0 && (
+                <>
+                  <li>
+                    <div className="row">
+                      <div>Quantity</div>
+                      <div>
+                        <select
+                          value={qty}
+                          onChange={(e) => setQty(e.target.value)}
+                        >
+                          {[...Array(product.countInStock).keys()].map((x) => (
+                            <option key={x + 1} value={x + 1}>
+                              {x + 1}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <button
+                      onClick={addToCartHandler}
+                      className="primary block"
+                    >
+                      Add to cart{" "}
+                    </button>
+                  </li>
+                </>
+              )}
             </ul>
           </div>
         </div>
