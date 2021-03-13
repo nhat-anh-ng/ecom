@@ -13,7 +13,7 @@ function App() {
         <header className="row header">
           <div>
             <Link className="brand" to="/">
-              Amazon
+              AREOSH
             </Link>
           </div>
           <div>

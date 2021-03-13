@@ -21,13 +21,13 @@ body {
   display: grid;
   grid-template-areas: "header" "main" "footer";
   grid-template-columns: 1fr;
-  grid-template-rows: 5rem 1fr 5rem;
+  grid-template-rows: 11rem 1fr 5rem;
   height: 100%;
 }
 
 .header {
   grid-area: header;
-  background-color: #203040;
+  margin: 0rem 2.5rem;
 }
 
 .main {
@@ -46,9 +46,19 @@ h1 {
   font-size: 1.8rem;
   padding: 1rem 0;
 }
+
 h2 {
   font-size: 1.6rem;
   padding: 1rem 0;
+}
+
+.h1persona {
+  font-size: 3.5rem;
+  font-weight: 300;
+}
+
+.aPersona {
+  text-decoration: underline;
 }
 a {
   text-decoration: none;
@@ -90,13 +100,13 @@ button.block {
 
 /*Header*/
 header a {
-  color: #ffffff;
+  color: black;
   padding: 1rem;
 }
 a.brand {
-  color: #ffffff;
-  font-size: 3rem;
-  font-weight: bold;
+  color: black;
+  font-size: 8rem;
+  font-weight: 300;
 }
 .badge {
   background-color: #f02020;
@@ -144,6 +154,22 @@ img.medium {
 img.large {
   width: 95%;
   margin: 0.5rem;
+}
+
+.persona {
+  max-width: 58rem;
+  width: 100%;
+}
+
+.textOver {
+  position: absolute;
+  width: 75%;
+  background-color: white;
+  transform: translate(-50%, -50%);
+  top: 92%;
+  left: 58%;
+  font-size: 5rem;
+  font-weight: 300;
 }
 
 /*card*/

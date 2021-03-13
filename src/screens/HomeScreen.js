@@ -4,8 +4,11 @@ import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
 import { useDispatch, useSelector } from "react-redux";
 import { listProducts } from "../actions/productActions";
+
+import MainPersonas from "../components/MainPersonas";
 export default function HomeScreen() {
   const dispatch = useDispatch();
+
   const productList = useSelector((state) => state.productList);
   const { loading, error, products } = productList;
   useEffect(() => {
@@ -13,6 +16,7 @@ export default function HomeScreen() {
   }, [dispatch]);
   return (
     <div>
+      <MainPersonas></MainPersonas>
       {loading ? (
         <LoadingBox></LoadingBox>
       ) : error ? (
@@ -20,7 +24,9 @@ export default function HomeScreen() {
       ) : (
         <div className="row center">
           {products.map((product) => (
-            <Product key={product._id} product={product}></Product>
+            <Product key={product._id} product={product}>
+              {console.log(products)}
+            </Product>
           ))}
         </div>
       )}

@@ -78,6 +78,15 @@ const data = {
       note2: "2.5",
     },
   ],
+  personas: [
+    {
+      _id: "1",
+      image:
+        "https://images.unsplash.com/photo-1599309329365-0a9ed45a1da3?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDMzfFM0TUtMQXNCQjc0fHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      title: "Hi",
+      subtitle: "sub",
+    },
+  ],
 };
 
 export default data;
