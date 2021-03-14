@@ -35,12 +35,6 @@ body {
   padding: 1rem;
 }
 
-.footer {
-  grid-area: footer;
-  background-color: #203040;
-  color: #ffffff;
-}
-
 /*Common*/
 h1 {
   font-size: 1.8rem;
@@ -52,16 +46,9 @@ h2 {
   padding: 1rem 0;
 }
 
-.h1persona {
-  font-size: 3.5rem;
-  font-weight: 300;
-}
-
-.aPersona {
-  text-decoration: underline;
-}
 a {
   text-decoration: none;
+  color: black;
 }
 a:hover {
   color: #ff8000;
@@ -155,23 +142,6 @@ img.large {
   width: 95%;
   margin: 0.5rem;
 }
-
-.persona {
-  max-width: 58rem;
-  width: 100%;
-}
-
-.textOver {
-  position: absolute;
-  width: 75%;
-  background-color: white;
-  transform: translate(-50%, -50%);
-  top: 92%;
-  left: 58%;
-  font-size: 5rem;
-  font-weight: 300;
-}
-
 /*card*/
 .card {
   border: 0.1rem gray;
@@ -213,4 +183,79 @@ img.large {
 .alert-danger {
   color: #a02020;
   background-color: #e0e0ff;
+}
+
+/*Persona*/
+.h1persona {
+  font-size: 3.5rem;
+  font-weight: 300;
+}
+.aPersona {
+  text-decoration: underline;
+}
+.persona {
+  max-width: 58rem;
+  width: 100%;
+}
+.textOver {
+  position: absolute;
+  width: 75%;
+  background-color: white;
+  transform: translate(-50%, -50%);
+  top: 92%;
+  left: 58%;
+  font-size: 5rem;
+  font-weight: 100;
+}
+
+/* Reassure*/
+.reaBackground {
+  background-color: #f8f8f8;
+  padding: 6rem;
+  margin: 2rem 0rem;
+}
+.reaCart {
+  padding: 2rem;
+  width: 33rem;
+}
+.reaTitle {
+  font-size: 2rem;
+  font-weight: 300;
+}
+.reaIcon {
+  font-size: 5rem;
+  padding: 2rem;
+}
+/*Footer*/
+.footer {
+  margin-top: 3rem;
+  background-color: black;
+  color: white;
+  padding: 5rem;
+}
+.fgrid {
+  padding: 0rem 7rem;
+}
+.finput {
+  background-color: transparent;
+  border: thin;
+
+  text-decoration: underline;
+  color: white;
+  width: 42rem;
+  padding-left: 0rem;
+}
+.footer i {
+  font-size: 2rem;
+  padding-right: 4rem;
+  cursor: pointer;
+}
+.footer p {
+  font-size: 1.2rem;
+  color: gray;
+  margin-block-start: 0rem;
+}
+.f {
+  margin-top: 10rem;
+  font-size: 1.5rem;
 }

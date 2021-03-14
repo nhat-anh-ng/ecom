@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { listProducts } from "../actions/productActions";
 
 import MainPersonas from "../components/MainPersonas";
+import Reassure from "../components/Reassure";
 export default function HomeScreen() {
   const dispatch = useDispatch();
 
@@ -17,6 +18,7 @@ export default function HomeScreen() {
   return (
     <div>
       <MainPersonas></MainPersonas>
+      <Reassure></Reassure>
       {loading ? (
         <LoadingBox></LoadingBox>
       ) : error ? (
